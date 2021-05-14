@@ -1,0 +1,1 @@
+importScripts('https://staging-mars.paisabazaar.com/webpush/firebase-messaging-sw-dev.js');

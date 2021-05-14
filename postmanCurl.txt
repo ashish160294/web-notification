@@ -1,0 +1,19 @@
+curl --location --request POST 'https://fcm.googleapis.com//v1/projects/push-notification-ce04d/messages:send' \
+--header 'Authorization: <Token genersted by using app credentials by siteOwner' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "message": {
+    "token" : <tokenRegisteredinBrowser>,
+    "data": {
+        "title": "OFFERS",
+        "body": "Message Body",
+        "clickAction": "https://www.google.com",
+        "requireInteraction": "true",
+        "logo": "https://cdn.mos.cms.futurecdn.net/BVb3Wzn9orDR8mwVnhrSyd-650-80.jpg"
+    },
+    "webpush": {
+      "headers": {
+        "Urgency": "high"
+      }
+}}}
+'
